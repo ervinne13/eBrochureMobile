@@ -1,0 +1,21 @@
+<ion-view view-title="Product View">
+     <ion-nav-buttons side="right">
+        <button class="button" ng-click="showAddToCartOptions()">
+            <i class="ion-plus"></i>
+            <i class="ion-ios-cart"></i>            
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div>
+            <img ng-src="{{server}}/{{product.image_url}}" style="width: 100%">
+
+            <div class="padding">
+                <h4 class="center">{{product.name}}</h4>
+                <h5>For only P{{product.price}}</h5>
+                
+                <p>{{product.description}}</p>
+                
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

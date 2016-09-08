@@ -1,0 +1,29 @@
+<ion-view view-title="Current Cart">
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="showActions()">
+            Actions
+        </button>
+    </ion-nav-buttons>
+    <ion-content>        
+        <div class="padding">
+            <h4>Total: P{{salesOrder.total_amount}}</h4>
+            <h5>Items Ordered: {{salesOrder.total_item_qty}}</h5>
+
+            <h5 style="float:right">Particulars</h5>
+
+            <ion-list style="float:left; width: 100%">
+                <ion-item class="item-remove-animate" ng-repeat="detail in salesOrder.details" type="item-text-wrap">        
+                    <h2 style="float:left">{{detail.product.name}}</h2>
+                    <h3 style="float:right">Qty: {{detail.qty}}</h3>
+                    
+                    <br>
+                    <p>{{detail.product.description}}</p>                    
+                    
+                    <ion-option-button class="button-assertive" ng-click="remove(detail)">
+                        Delete
+                    </ion-option-button>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

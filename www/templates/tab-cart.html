@@ -1,0 +1,29 @@
+<ion-view view-title="Cart">
+    <ion-content>
+        <ion-list>
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <h4>My Cart</h4>
+                    <h5 style="float: left">P{{currentSalesOrder.total_amount}}</h5>
+                    <h5 style="float: right">Items in my Cart: {{currentSalesOrder.total_item_qty}}</h5>
+
+                    <br>
+                    <a class="button button-balanced" style="float: right" href="#/tab/current-orders">
+                        <i class="ion-ios-cart"></i>
+                        Check Orders
+                    </a>
+                </div>
+            </div>
+        </ion-list>
+
+        <h5 class="padding">Past Orders</h5>
+        <ion-list>
+            <ion-item class="item-remove-animate" ng-repeat="order in salesOrders" type="item-text-wrap">        
+                <h2>{{order.doc_no}}</h2>
+                <p>Total: P{{order.total_amount}}</p>
+                <p>Status: {{order.status}}</p>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

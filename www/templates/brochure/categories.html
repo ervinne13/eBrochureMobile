@@ -1,0 +1,15 @@
+<ion-view view-title="Brochure">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item item-icon-right" ng-repeat="category in categories" href="#/tab/brochure/{{category.id}}/products">
+                <h2>{{category.name}}</h2>
+                <p>{{category.description}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+        <div ng-show="!categories.length" ng-click="loadCategories()" style="text-align:center">
+            <h3>No categories found.</h3>
+            <h6>Click to refresh <i class="ion-refresh"></i></h6>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="Account">
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="showActions()">
+            Actions
+        </button>
+    </ion-nav-buttons>
+    <ion-content>        
+        <div class="list">
+            <label class="item item-input">                
+                <input type="text" placeholder="http:// (server)" ng-model="settings.server">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Email" ng-model="settings.email">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Name" ng-model="settings.name">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Contact" ng-model="settings.contact">
+            </label>
+            <label class="item item-input">
+                <textarea placeholder="Address" ng-model="settings.address"></textarea>
+            </label>            
+        </div>
+    </ion-content>
+</ion-view>
